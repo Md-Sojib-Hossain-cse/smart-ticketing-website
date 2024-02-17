@@ -14,3 +14,10 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+
+.banner-bg{
+    background: linear-gradient(180.00deg, rgba(3, 7, 18, 0.5),rgba(3, 7, 18, 0) 100%),url(../images/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
