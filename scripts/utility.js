@@ -26,7 +26,25 @@ function increaseCounterValueById(elementId){
     const elementNewValue = elementValue + 1;
     return elementNewValue;
 }
-//get element by ID
-function getElementById(elementId){
-    return document.getElementById(elementId);
+
+// adding selected seat by id
+function addingSelectedSeatDetailsById(elementId , seatName){
+    const container = document.getElementById(elementId);
+
+    const div = document.createElement('div');
+
+    const p1 = document.createElement('p');
+    p1.innerText = seatName;
+    const p2 = document.createElement('p');
+    p2.innerText = 'Economoy';
+    const p3 = document.createElement('p');
+    p3.innerText = '550';
+
+    div.appendChild(p1);
+    div.appendChild(p2);
+    div.appendChild(p3);
+
+    div.style.display = 'flex';
+    div.style.justifyContent = 'space-between';
+    container.appendChild(div);
 }
