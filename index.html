@@ -68,7 +68,7 @@
                     Yes, you can run unit tests and view the results directly within the app. The integrated testing
                     features allow for a streamlined .</p>
                 <button
-                    class="btn bg-[#1DD100] rounded-xl text-xl font-bold leading-6 traking-[0] mt-4 md:mt-8 border-transparent">Success</button>
+                    class="text-[#030712] btn bg-[#1DD100] rounded-xl text-xl font-bold leading-6 traking-[0] mt-4 md:mt-8 border-transparent">Buy Tickets</button>
                 <!-- banner badge  -->
                 <div class="font-inter flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
                     <div
@@ -153,7 +153,7 @@
 
         <!-- ticket booking section  -->
         <section
-            class="w-[1440px] max-w-full mx-auto mt-20 md:mt-28 lg:mt-[120px] box-border border-t-2 border-[#1DD100] rounded-t-[88px] bg-[#F7F8F8]">
+            class="w-[1440px] max-w-full mx-auto mt-20 md:mt-28 lg:mt-[120px] box-border border-t-2 border-[#1DD100] rounded-t-[88px] bg-[#F7F8F8] pb-20 md:pb-28 lg:pb-[120px]">
             <!-- section content -->
             <div class="w-[1171px] max-w-[90%] md:max-w-[81.33%] mx-auto mt-20 md:mt-28 lg:mt-[120px] text-center">
                 <h4 class="text-[#030712] font-bold text-3xl md:text-4xl lg:text-[40px]">P.H Paribahan</h4>
@@ -219,7 +219,7 @@
             </div>
             <!-- Select your seat -->
             <div
-                class="w-[1171px] max-w-[90%] md:max-w-[81.33%] mx-auto mt-5 md:mt-6 rounded-3xl bg-white p-6 md:p-7 lg:p-8 flex flex-col xl:flex-row">
+                class="w-[1171px] max-w-[90%] md:max-w-[81.33%] mx-auto mt-5 md:mt-6 rounded-3xl bg-white p-6 md:p-7 lg:p-8 flex flex-col xl:flex-row justify-between">
                 <!-- left side -->
                 <div class="xl:pr-8">
                     <div>
@@ -255,7 +255,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="flex justify-between items-center flex-col md:flex-row gap-8">
+                    <div class="flex justify-between items-center flex-col lg:flex-row gap-12">
                         <div class="text-[#03071280] font-inter text-base md:text-lg font-medium">
                             <div class="flex items-center justify-start gap-4 mt-5 md:mt-6">
                                 <p class="leading-5 w-4">A</p>
@@ -432,7 +432,8 @@
                         </div>
                         <button
                             class="text-white text-xl font-extrabold leading-6 bg-[#1DD100] rounded-2xl h-16 w-full mt-4 md:mt-5 lg:mt-6">Next</button>
-                        <div class="text-[#03071299] font-inter text-base leading-5 mt-4 md:mt-5 lg:mt-6 flex justify-around items-center">
+                        <div
+                            class="text-[#03071299] font-inter text-base leading-5 mt-4 md:mt-5 lg:mt-6 flex justify-around items-center">
                             <a class="underline">Terms and Conditions</a>
                             <a class="underline">Cancellation Policy</a>
                         </div>
@@ -442,7 +443,35 @@
         </section>
     </main>
     <!-- footer starts -->
-    <footer></footer>
+    <footer class="w-[1440px] max-w-full bg-[#030712]">
+        <div class="w-[1171px] max-w-[90%] md:max-w-[81.33%] mx-auto">
+            <div class="pt-20 md:pt-28 lg:pt-[120px] flex justify-between pb-8 md:pb-10 lg:pb-12 border-b-2 border-dashed border-[#FFFFFF4D]">
+                <div class="max-w-[374px]">
+                    <h3 class="text-white font-extrabold text-4xl leading-10">P-Ticket</h3>
+                    <p class="text-[#FFFFFFCC] font-inter text-lg leading-7 pt-4">P-Ticket is a digital platform to make
+                        your daily commuting better.</p>
+                </div>
+                <div>
+                    <p class="text-white font-semibold text-xl leading-6 text-right">Download our app</p>
+                    <div class="p-2.5 border-[0.5px] border-white rounded-xl flex w-48 justify-between gap-3 mt-4 md:mt-5 lg:mt-6">
+                        <img src="./images/playstore.png" alt="playstore" >
+                        <div">
+                            <p class="text-white text-[12px] font-bold">GET IT ON</p>
+                            <p class="text-white text-lg font-bold">GOOGLE PLAY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 md:pt-7 lg:pt-8 pb-20 md:pb-28 lg:pb-[120px]w-[1171px] max-w-[90%] md:max-w-[81.33%] mx-auto flex justify-between flex-col md:flex-row">
+                <p class="text-[#FFFFFFB3] font-inter text-base font-normal leading-5">@all rights reserved, P-Ticket services limited.2024</p>
+                <div class="text-white font-medium font-inter text-base leading-5 flex justify-between gap-8">
+                    <a>Terms & condition</a>
+                    <a>Return & refund policy</a>
+                    <a>Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- External Js Linked -->
     <script src="./scripts/index.js"></script>
 </body>
