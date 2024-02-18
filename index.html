@@ -219,9 +219,9 @@
             </div>
             <!-- Select your seat -->
             <div
-                class="w-[1171px] max-w-[90%] md:max-w-[81.33%] mx-auto mt-5 md:mt-6 rounded-3xl bg-white p-6 md:p-7 lg:p-8">
+                class="w-[1171px] max-w-[90%] md:max-w-[81.33%] mx-auto mt-5 md:mt-6 rounded-3xl bg-white p-6 md:p-7 lg:p-8 flex flex-col xl:flex-row">
                 <!-- left side -->
-                <div>
+                <div class="xl:pr-8">
                     <div>
                         <h5 class="text-[#030712] text-xl md:text-2xl font-semibold leading-6 md:leading-7">Select Your
                             Seat</h5>
@@ -255,7 +255,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="flex justify-between items-center flex-col md:flex-row">
+                    <div class="flex justify-between items-center flex-col md:flex-row gap-8">
                         <div class="text-[#03071280] font-inter text-base md:text-lg font-medium">
                             <div class="flex items-center justify-start gap-4 mt-5 md:mt-6">
                                 <p class="leading-5 w-4">A</p>
@@ -373,50 +373,68 @@
                     </div>
                 </div>
                 <!-- right side -->
-                <div>
+                <div class="xl:pl-8 xl:border-l-2 xl:border-dotted mt-8 xl:mt-0">
                     <div>
-                        <h5>Select Your Seat</h5>
+                        <h5
+                            class="text-[#030712] text-xl md:text-2xl font-semibold leading-6 md:leading-7 mt-5 md:mt-0">
+                            Select Your Seat</h5>
                     </div>
-                    <div class="divider"></div>
-                    <div>
-                        <div>
-                            <p>Seat <sup>2</sup>
+                    <div class="divider mt-5"></div>
+                    <div class="p-4 md:p-6 lg:p-8 bg-[#F7F8F8] rounded-xl">
+                        <div
+                            class="flex justify-between text-[#030712] font-inter text-sm md:text-base font-medium leading-5">
+                            <p>Seat <sup
+                                    class="text-white text-[12px] font-bold leading-4 bg-[#1DD100] rounded-[5px] px-1">0</sup>
                             </p>
                             <p>Class</p>
                             <p>Price</p>
                         </div>
-                        <div class="divider"></div>
+                        <div class="divider mt-4"></div>
                         <div></div>
-                        <hr>
-                        <div>
+                        <div class="divider mt-4"></div>
+                        <div
+                            class="flex justify-between items-center mt-4 text-[#030712] font-inter text-sm md:text-base font-medium leading-4 md:leading-5">
                             <p>Total Price</p>
-                            <p>BDT 1100</p>
+                            <p>BDT <span>0</span></p>
                         </div>
-                        <div>
-                            <input type="text" name="" id="">
-                            <button>Apply</button>
+                        <div class="font-inter mt-4 rounded-xl bg-white h-14 w-full flex">
+                            <input type="text" name="" id=""
+                                class="rounded-xl h-full flex-1 pl-5 placeholder:text-[#03071266]  placeholder:text-sm"
+                                placeholder="Have any copupon?">
+                            <button
+                                class="text-white text-base font-semibold leading-5 bg-[#1DD100] rounded-lg h-10 w-20 m-2">Apply</button>
                         </div>
-                        <div>
+                        <div
+                            class="flex justify-between items-center mt-4 md:mt-5 lg:mt-6 text-[#030712] font-inter text-sm md:text-base font-medium leading-5">
                             <p>Grand Total</p>
-                            <p>BDT 1100</p>
+                            <p>BDT <span>0</span></p>
                         </div>
-                        <div>
-                            <div>
-                                <label for="">Passenger Name*</label>
-                                <input type="text" name="" id="">
-                            </div>
-                            <div>
-                                <label for="">Phone Number*</label>
-                                <input type="number" name="" id="">
-                            </div>
-                            <div>
-                                <label for="">Email ID</label>
-                                <input type="email" name="" id="">
-                            </div>
-                            <button></button>
-                            <div></div>
-                            <a href="">Terms and Conditions</a>
-                            <a href="">Cancellation Policy</a>
+                    </div>
+                    <div>
+                        <div class="font-inter mt-4 md:mt-5 lg:mt-6 flex flex-col gap-4">
+                            <label for="" class="text-[#030712] text-base font-semibold leading-5">Passenger
+                                Name*</label>
+                            <input type="text" name="" id=""
+                                class="placeholder:text-[#03071266] text-base leading-5 border-[1px] border-[#0307121A] rounded-xl h-16 w-full pl-6"
+                                placeholder="Enter your name">
+                        </div>
+                        <div class="font-inter mt-4 md:mt-5 lg:mt-6 flex flex-col gap-4">
+                            <label for="" class="text-[#030712] text-base font-semibold leading-5">Phone Number*</label>
+                            <input type="number" name="" id=""
+                                class="placeholder:text-[#03071266] text-base leading-5 border-[1px] border-[#0307121A] rounded-xl h-16 w-full pl-6"
+                                placeholder="Enter your phone number">
+                        </div>
+                        <div class="font-inter mt-4 md:mt-5 lg:mt-6 flex flex-col gap-4">
+                            <label for="" class="text-[#030712] text-base font-semibold leading-5">Email ID</label>
+                            <input type="email" name="" id=""
+                                class="placeholder:text-[#03071266] text-base leading-5 border-[1px] border-[#0307121A] rounded-xl h-16 w-full pl-6"
+                                placeholder="Enter your email id">
+                        </div>
+                        <button
+                            class="text-white text-xl font-extrabold leading-6 bg-[#1DD100] rounded-2xl h-16 w-full mt-4 md:mt-5 lg:mt-6">Next</button>
+                        <div class="text-[#03071299] font-inter text-base leading-5 mt-4 md:mt-5 lg:mt-6 flex justify-around items-center">
+                            <a class="underline">Terms and Conditions</a>
+                            <a class="underline">Cancellation Policy</a>
                         </div>
                     </div>
                 </div>
