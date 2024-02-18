@@ -1,32 +1,32 @@
 //ticket price
-function ticketPriceById(elementId){
+function ticketPriceById(elementId) {
     const ticketPriceElement = document.getElementById(elementId);
     const ticketPriceElementText = ticketPriceElement.innerText;
     const ticketPriceValue = parseInt(ticketPriceElementText);
     return ticketPriceValue;
 }
 // change color and bg color by id 
-function addColorById(elementId){
+function addColorById(elementId) {
     const element = document.getElementById(elementId);
     element.style.color = 'white';
-    element.style.backgroundColor ='#1DD100';
+    element.style.backgroundColor = '#1DD100';
 }
 
 // get element by Id
-function getInnerValueById (elementId){
+function getInnerValueById(elementId) {
     const element = document.getElementById(elementId);
     const elementText = element.innerText;
     const elementValue = parseInt(elementText);
     return elementValue;
 }
 //set element value by id
-function setInnerValueById (elementId , value){
+function setInnerValueById(elementId, value) {
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
 
 //increase counter value by Id
-function increaseCounterValueById(elementId){
+function increaseCounterValueById(elementId) {
     const element = document.getElementById(elementId);
     const elementText = element.innerText;
     const elementValue = parseInt(elementText);
@@ -35,7 +35,7 @@ function increaseCounterValueById(elementId){
 }
 
 // adding selected seat by id
-function addingSelectedSeatDetailsById(elementId , seatName , seatPrice){
+function addingSelectedSeatDetailsById(elementId, seatName, seatPrice) {
     const container = document.getElementById(elementId);
 
     const div = document.createElement('div');
@@ -57,7 +57,7 @@ function addingSelectedSeatDetailsById(elementId , seatName , seatPrice){
 }
 
 //update element value by Id and given value
-function updateElementValueById(elementId , ticketPrice){
+function updateElementValueById(elementId, ticketPrice) {
     const currentTotalPriceElement = document.getElementById(elementId);
     const currentTotalPriceText = currentTotalPriceElement.innerText;
     const currentTotalPrice = parseInt(currentTotalPriceText);
@@ -66,11 +66,14 @@ function updateElementValueById(elementId , ticketPrice){
 }
 
 //update Grand Total Price 
-function updateGrandTotalPrice(elementId , updatedTotalPrice){
-    const grandTotalElement = document.getElementById(elementId);
-    const grandTotalText = grandTotalElement.innerText;
-    const grandTotalPrice = parseInt(grandTotalText);
-    const updatedGrandTotalPrice = grandTotalPrice +updatedTotalPrice;
-
+function updateGrandTotalPrice(updatedTotalPrice) {
+    const updatedGrandTotalPrice = updatedTotalPrice;
     return updatedGrandTotalPrice;
+}
+
+//number field value
+function numberValueLength(elementId) {
+    const numberValue = document.getElementById(elementId).value;
+    const numberValueLength = numberValue.length;
+    return numberValueLength;
 }
