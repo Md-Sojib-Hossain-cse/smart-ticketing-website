@@ -17,3 +17,16 @@ function setInnerValueById (elementId , value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
+
+//increase counter value by Id
+function increaseCounterValueById(elementId){
+    const element = document.getElementById(elementId);
+    const elementText = element.innerText;
+    const elementValue = parseInt(elementText);
+    const elementNewValue = elementValue + 1;
+    return elementNewValue;
+}
+//get element by ID
+function getElementById(elementId){
+    return document.getElementById(elementId);
+}

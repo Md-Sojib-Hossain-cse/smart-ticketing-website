@@ -10,6 +10,10 @@ for(const seat of seats){
         const remainingSeat = remainingSeatValue - 1;
         setInnerValueById('remainingSeatCount' , remainingSeat);
 
+        //selected seat count increase 
+        const newCountValue = increaseCounterValueById('selectedseatCount');
+        setInnerValueById('selectedseatCount', newCountValue);
+
         console.log(remainingSeat);
     });
 }
