@@ -1,3 +1,10 @@
+//ticket price
+function ticketPriceById(elementId){
+    const ticketPriceElement = document.getElementById(elementId);
+    const ticketPriceElementText = ticketPriceElement.innerText;
+    const ticketPriceValue = parseInt(ticketPriceElementText);
+    return ticketPriceValue;
+}
 // change color and bg color by id 
 function addColorById(elementId){
     const element = document.getElementById(elementId);
@@ -28,7 +35,7 @@ function increaseCounterValueById(elementId){
 }
 
 // adding selected seat by id
-function addingSelectedSeatDetailsById(elementId , seatName){
+function addingSelectedSeatDetailsById(elementId , seatName , seatPrice){
     const container = document.getElementById(elementId);
 
     const div = document.createElement('div');
@@ -38,7 +45,7 @@ function addingSelectedSeatDetailsById(elementId , seatName){
     const p2 = document.createElement('p');
     p2.innerText = 'Economoy';
     const p3 = document.createElement('p');
-    p3.innerText = '550';
+    p3.innerText = seatPrice;
 
     div.appendChild(p1);
     div.appendChild(p2);
@@ -50,10 +57,20 @@ function addingSelectedSeatDetailsById(elementId , seatName){
 }
 
 //update element value by Id and given value
-function updateElementValueById(elementId){
+function updateElementValueById(elementId , ticketPrice){
     const currentTotalPriceElement = document.getElementById(elementId);
     const currentTotalPriceText = currentTotalPriceElement.innerText;
     const currentTotalPrice = parseInt(currentTotalPriceText);
-    const updatedTotalPrice = currentTotalPrice + 550;
+    const updatedTotalPrice = currentTotalPrice + ticketPrice;
     return updatedTotalPrice;
+}
+
+//update Grand Total Price 
+function updateGrandTotalPrice(elementId , updatedTotalPrice){
+    const grandTotalElement = document.getElementById(elementId);
+    const grandTotalText = grandTotalElement.innerText;
+    const grandTotalPrice = parseInt(grandTotalText);
+    const updatedGrandTotalPrice = grandTotalPrice +updatedTotalPrice;
+
+    return updatedGrandTotalPrice;
 }
