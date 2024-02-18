@@ -48,3 +48,12 @@ function addingSelectedSeatDetailsById(elementId , seatName){
     div.style.justifyContent = 'space-between';
     container.appendChild(div);
 }
+
+//update element value by Id and given value
+function updateElementValueById(elementId){
+    const currentTotalPriceElement = document.getElementById(elementId);
+    const currentTotalPriceText = currentTotalPriceElement.innerText;
+    const currentTotalPrice = parseInt(currentTotalPriceText);
+    const updatedTotalPrice = currentTotalPrice + 550;
+    return updatedTotalPrice;
+}

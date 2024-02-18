@@ -14,6 +14,9 @@ for(const seat of seats){
         setInnerValueById('selectedseatCount', newCountValue);
         //adding selected seat details
         addingSelectedSeatDetailsById('selectedSeatDetails' , pressedSeat);
+        //total price update
+        const updatedTotalPrice = updateElementValueById('totalPrice');
+        setInnerValueById('totalPrice',updatedTotalPrice)
         console.log(remainingSeat);
     });
 }
