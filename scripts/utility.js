@@ -12,7 +12,7 @@ function addColorById(elementId) {
     element.style.backgroundColor = '#1DD100';
 }
 
-// get element by Id
+// get element value by Id
 function getInnerValueById(elementId) {
     const element = document.getElementById(elementId);
     const elementText = element.innerText;

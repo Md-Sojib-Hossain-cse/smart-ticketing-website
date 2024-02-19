@@ -3,6 +3,11 @@ const ticketPrice = ticketPriceById('ticketPrice');
 const nextButton = document.getElementById('nextButton');
 const couponInput = document.getElementById('couponInput');
 const couponClaimButton = document.getElementById('couponClaimButton');
+const couponOnePercentage = getInnerValueById('couponFirst');
+const couponOneCode = document.getElementById('couponOneCode').innerText;
+const couponTwoPercentage = getInnerValueById('couponTwo');
+const couponTwoCode = document.getElementById('couponTwoCode').innerText;
+
 let countValue = 0;
 
 userNumber.addEventListener('input', function (e) {
@@ -65,3 +70,40 @@ for (const seat of seats) {
         }
     });
 }
+
+//coupon validation
+couponClaimButton.addEventListener('click' , function(){
+    const couponInputValue = couponInput.value;
+    if(couponInputValue === couponOneCode){
+        const currentGrandTotalPrice = getInnerValueById('totalPrice');
+        const updatedGrandTotalPrice = currentGrandTotalPrice - (currentGrandTotalPrice * couponOnePercentage / 100);
+        setInnerValueById('grandTotal' , updatedGrandTotalPrice);
+        return;
+    }
+    else if(couponInputValue === couponTwoCode){
+        const currentGrandTotalPrice = getInnerValueById('totalPrice');
+        const updatedGrandTotalPrice = currentGrandTotalPrice - (currentGrandTotalPrice * couponTwoPercentage / 100);
+        setInnerValueById('grandTotal' , updatedGrandTotalPrice);
+        return;
+    }
+    else{
+        alert('Your Provided Coupon is not valid !!');
+        return;
+    }
+})
+
+// couponInput.addEventListener('input' , function(e){
+//     const userInput = e.target.value;
+//     console.log(userInput);
+
+//     if(userInput === couponOneCode){
+//         console.log('hello')
+//     }
+//     else if(userInput === couponTwoCode){
+//         console.log("hi")
+//     }
+//     else{
+//         alert("Your Provided coupon is not valid !!");
+//         return;
+//     }
+// })
