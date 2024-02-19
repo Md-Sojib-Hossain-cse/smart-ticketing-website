@@ -77,3 +77,35 @@ function numberValueLength(elementId) {
     const numberValueLength = numberValue.length;
     return numberValueLength;
 }
+
+//calculated and update coupon one value
+function calculateUpdateWithCouponOne(){
+    const currentGrandTotalPrice = getInnerValueById('totalPrice');
+        const discountedPrice = currentGrandTotalPrice * couponOnePercentage / 100;
+        const updatedGrandTotalPrice = currentGrandTotalPrice - discountedPrice;
+        setInnerValueById('grandTotal' , updatedGrandTotalPrice);
+        const discountedPriceContainer = document.getElementById('discountedPriceContainer');
+        discountedPriceContainer.classList.remove("hidden");
+        setInnerValueById('discountedPrice' , discountedPrice);
+        couponFieldDisabled();
+}
+
+//calculated and update coupon Two value
+function calculateUpdateWithCouponTwo(){
+    const currentGrandTotalPrice = getInnerValueById('totalPrice');
+        const discountedPrice = currentGrandTotalPrice * couponTwoPercentage / 100;
+        const updatedGrandTotalPrice = currentGrandTotalPrice - discountedPrice;
+        setInnerValueById('grandTotal' , updatedGrandTotalPrice);
+        const discountedPriceContainer = document.getElementById('discountedPriceContainer');
+        discountedPriceContainer.classList.remove("hidden");
+        setInnerValueById('discountedPrice' , discountedPrice);
+        couponFieldDisabled();
+}
+
+// coupon field disabled
+function couponFieldDisabled(){
+    const couponField = document.getElementById('couponInput');
+    const couponClaimButton = document.getElementById('couponClaimButton');
+    couponField.setAttribute("disabled" , true);
+    couponClaimButton.setAttribute("disabled" , true);
+}

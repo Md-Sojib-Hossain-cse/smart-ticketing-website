@@ -75,15 +75,11 @@ for (const seat of seats) {
 couponClaimButton.addEventListener('click' , function(){
     const couponInputValue = couponInput.value;
     if(couponInputValue === couponOneCode){
-        const currentGrandTotalPrice = getInnerValueById('totalPrice');
-        const updatedGrandTotalPrice = currentGrandTotalPrice - (currentGrandTotalPrice * couponOnePercentage / 100);
-        setInnerValueById('grandTotal' , updatedGrandTotalPrice);
+        calculateUpdateWithCouponOne();
         return;
     }
     else if(couponInputValue === couponTwoCode){
-        const currentGrandTotalPrice = getInnerValueById('totalPrice');
-        const updatedGrandTotalPrice = currentGrandTotalPrice - (currentGrandTotalPrice * couponTwoPercentage / 100);
-        setInnerValueById('grandTotal' , updatedGrandTotalPrice);
+        calculateUpdateWithCouponTwo();
         return;
     }
     else{
@@ -91,19 +87,3 @@ couponClaimButton.addEventListener('click' , function(){
         return;
     }
 })
-
-// couponInput.addEventListener('input' , function(e){
-//     const userInput = e.target.value;
-//     console.log(userInput);
-
-//     if(userInput === couponOneCode){
-//         console.log('hello')
-//     }
-//     else if(userInput === couponTwoCode){
-//         console.log("hi")
-//     }
-//     else{
-//         alert("Your Provided coupon is not valid !!");
-//         return;
-//     }
-// })
